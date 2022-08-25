@@ -4,25 +4,59 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>연습문제 1</title>
+	<style>
+		ul{
+			list-style: none;
+		}
+		li {
+			font-size:20px; 
+			line-height: 35px;
+		}
+		.check {			
+			color:#ccc;
+			font-size:20px;
+			margin-right:25px;
+		}
+		.check:hover {
+			color:#222;
+		}
+	</style>
 </head>
 <body>
-	<h2>4의 배수일까 아닐까</h2>
+	<h1>할 일 목록</h1>
+	<ul>
+		<li><span class="check">&check;</span>할 일 1 </li>
+		<li><span class="check">&check;</span>할 일 2 </li>
+		<li><span class="check">&check;</span>할 일 3 </li>
+		<li><span class="check">&check;</span>할 일 4 </li>
+		<li><span class="check">&check;</span>할 일 5 </li>
+	</ul>
+
+<script>
+
+var checks = document.querySelectorAll(".check");
+for(var i = 0; i < checks.length; i++){
+
+	 checks[i].addEventListener("click", function()
+	 	{
+
+			this.style.color = "#ccc";
+			this.parentNode.style.color = "#ccc";
+			this.parentNode.style.textDecoration = "line-through";
+
+
+
+		} );
+
+}
 
 
 
 
-	<script>
-	
-		var userNumber = prompt("숫자를 입력하세요.");
-
-		if(userNumber !==null)
-		(userNumber % 4 === 0 ) ? alert ("4의 배수입니다.") : alert ("4의 배수가 아닙니다.");
-
-		else
-		
-			alert ("입력이 취소됐습니다.");
+</script>
 
 
-	</script>
+
+
 </body>
 </html>
